@@ -1,0 +1,21 @@
+<div>
+    <h2>Cadastro de Aluno</h2>
+  
+    <form>
+      <label for="matricula">Matrícula:</label>
+      <input id="matricula" [(ngModel)]="estudante.matricula" name="matricula" placeholder="Digite a matrícula" required />
+  
+      <label for="nome">Nome:</label>
+      <input id="nome" [(ngModel)]="estudante.nome" name="nome" placeholder="Digite o nome" required />
+  
+      <button type="button" (click)="salvar()">Salvar Aluno</button>
+      <button type="button" (click)="limparDados()">Limpar Dados</button>
+    </form>
+  
+    <div *ngIf="estudanteSalvo">
+      <h3>Aluno Salvo:</h3>
+      <p><strong>Matrícula:</strong> {{ estudanteSalvo.matricula }}</p>
+      <p><strong>Nome:</strong> {{ estudanteSalvo.nome }}</p>
+    </div>
+  </div>
+  
